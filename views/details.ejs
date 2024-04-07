@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= foundNote.heading %>
+    </title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* light gray background */
+            color: #343a40; /* dark text color */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff; /* white container background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+            margin-top: 20px; /* spacing from top */
+            margin-bottom: 20px; /* spacing from bottom */
+        }
+
+        .container h1 {
+            color: #dc3545; /* red heading color */
+            margin-bottom: 10px; /* space below heading */
+        }
+
+        .container p {
+            margin-bottom: 20px; /* space below paragraph */
+        }
+
+        .container2 {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* space between buttons */
+            margin-bottom: 20px; /* space below buttons */
+        }
+
+        .container2 button {
+            background-color: #dc3545; /* red button background */
+            color: #fff; /* white button text */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* smooth hover transition */
+        }
+
+        .container2 button:hover {
+            background-color: #c82333; /* darker red on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            <%= foundNote.heading %>
+        </h1>
+        <p>
+            <%= foundNote.matter %>
+        </p>
+    </div>
+    <div class="container2">
+        <form action="/notes/<%= foundNote.id %>?_method=DELETE" method="POST">
+            <button>Delete</button>
+        </form>
+        <form action="/notes/<%= foundNote.id %>/edit">
+            <button>Update</button>
+        </form>
+    </div>
+</body>
+
+</html>

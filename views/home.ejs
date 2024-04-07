@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Light grey background */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #333; /* Dark grey text */
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        form label {
+            font-size: 18px;
+            margin-right: 10px;
+            color: #333; /* Dark grey text */
+        }
+
+        form input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc; /* Light grey border */
+            border-radius: 5px;
+            width: 200px;
+            margin-right: 10px;
+        }
+
+        form button {
+            padding: 8px 16px;
+            font-size: 16px;
+            color: #fff; /* White text */
+            background-color: #dc3545; /* Red button */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #c82333; /* Darker red on hover */
+        }
+        li {
+            margin-left: 320px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Make your list</h1>
+    <form action="/todolist" method="POST">
+        <label for="todo">Task:</label>
+        <input type="text" name="name" placeholder="Todo" id="todo">
+        <button>Create</button>
+    </form>
+    <div class="container">
+            <ul>
+            <div class="checkbox-item">
+            <% for(let i=0; i<todos.length; i++) {%>
+         <li> 
+            <%= todos[i].name %> 
+        <form action="/todolist/<%=todos[i]._id%>?_method=DELETE" method="POST">
+            <button class="btn-danger">
+               Delete
+            </button>
+        </form></li>
+    </div></ul>
+ 
+        <% } %>
+    </div>
+</body>
+
+</html>

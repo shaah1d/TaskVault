@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskVault</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      /* display: flex; */
+      height: 100vh; /* Set height to 100% of viewport height */
+      margin: 0; /* Remove default margin */
+    }
+    .container1 {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.container1 .box1,
+.container1 .box2 {
+  flex: 1; /* Each box takes up equal space */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Center content vertically */
+}
+
+.container1 .box2 {
+  border-left: none; /* Remove left border for box2 */
+}
+
+.container1 .button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between buttons */
+}
+
+h1, .container1 h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 58px;
+  color: #333; /* Dark grey */
+}
+
+p, .container1 p {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  color: #666; /* Light grey */
+}
+
+button, .container1 button {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  color: #fff; /* White */
+  background-color: #dc3545; /* Red */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover, .container1 button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+    .container2 {
+           height: 100%;
+           width: 100%;
+           margin-left: 4px;
+    }
+    .about{
+      text-align: center;
+    }
+    .container2 {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px; /* Add margin to bottom */
+}
+
+.container2 header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.container2 .about {
+  margin: 0;
+}
+
+.container2 section {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container2 h2 {
+  color: black;
+}
+
+.container2 ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.container2 li {
+  margin-bottom: 10px;
+  color: black;
+}
+
+.container2 strong {
+  font-weight: bold;
+}
+span {
+  color: #dc3545;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="container1">
+  <div class="box1">
+    <h1>Task<span>Vault</span>.</h1>
+    <p>A site to help in your day to day productivity!</p>
+  </div>
+  <div class="box2">
+    <div class="button-container">
+      <form action="/todolist">
+        <button class="todo">To-Do List</button>
+      </form>
+      <form action="/notes">
+        <button class="note">Notes</button>
+      </form>
+    </div>
+  </div></div>
+  <div class="container2">
+    <header>
+      <h1 class="about">Welcome to TaskVault</h1>
+    </header>
+  
+    <section>
+      <h2>Our Mission</h2>
+      <p>At TaskVault, our mission is simple: to empower individuals to take control of their daily tasks and personal thoughts in one convenient platform. We understand the challenges of balancing work, life, and everything in between, which is why we've created a tool that adapts to your unique needs and helps you stay organized and focused.</p>
+    </section>
+  
+    <section>
+      <h2>Features</h2>
+      <ul>
+        <li><strong>To-Do List Management:</strong> Stay on top of your tasks and deadlines with our user-friendly to-do list manager. Create, prioritize, and track your tasks effortlessly, ensuring nothing falls through the cracks.</li>
+        <li><strong>Journaling and Note-Taking:</strong> Capture your thoughts, ideas, and memories with our integrated journaling and note-taking feature. Whether you're jotting down meeting notes, journaling your daily experiences, or brainstorming new ideas, TaskVault provides a secure space to store and organize your thoughts.</li>
+      </ul>
+    </section>
+  
+    <section>
+      <h2>Why Choose TaskVault?</h2>
+      <ul>
+        <li><strong>Efficiency:</strong> With TaskVault, you can seamlessly transition between managing your tasks and recording your thoughts without switching between multiple apps or platforms. Our intuitive interface and seamless integration ensure a smooth and efficient workflow.</li>
+        <li><strong>Security:</strong> Your privacy and security are our top priorities. TaskVault employs robust encryption and security measures to protect your data, giving you peace of mind knowing that your information is safe and secure.</li>
+        <li><strong>Accessibility:</strong> TaskVault is accessible anytime, anywhere, allowing you to stay productive whether you're at home, in the office, or on the go. Our responsive design ensures a seamless user experience across devices, so you can access your tasks and notes whenever and wherever you need them.</li>
+      </ul>
+    </section>
+  </div>
+ </body>
+</html>
