@@ -9,10 +9,6 @@ TaskVault is a versatile application designed for note-taking, journaling, and m
 - **To-Do Lists**: Manage your tasks efficiently with customizable to-do lists.
 - **Easy-to-Use Interface**: Intuitive design makes TaskVault accessible and enjoyable to use for users of all levels.
 
-## Getting Started
-
-To get started with TaskVault, simply [visit our website](#) and sign up for an account. Once logged in, you can start using all the features TaskVault has to offer.
-
 ## Technologies Used
 
 - Frontend: HTML, CSS, JavaScript
